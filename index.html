@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Tic Tac Toe</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			
+		
+		</script>
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
+		<style type="text/css">
+			td[id*="cell"]{
+				width: 100px; 
+				height: 100px; 
+				border: 1px solid blue;
+			}
+			td#cell11, td#cell21, td#cell31{
+				border-left: none;
+			}
+			td[id*="cell1"]{
+				border-top: none;
+			}
+			td[id*="cell3"]{
+				border-bottom: none;
+			}
+			td#cell13, td#cell23, td#cell33{
+				border-right: none;
+			}
+			h1{
+				margin: 15px 0px;
+				font: 16px/18px Futura;
+				color: blue;
+			}
+			body{
+				text-align: center;
+			}
+			table{
+				margin: auto;
+			}
+		
+		</style>
+	</head>
+	<body>
+	
+		<h1>Tic Tac Toe</h1>
+		<table>
+			<tr>
+				<td id="cell11"></td>
+				<td id="cell12"></td>
+				<td id="cell13"></td>
+			</tr>
+			<tr>
+				<td id="cell21"></td>
+				<td id="cell22"></td>
+				<td id="cell23"></td>
+			</tr>
+			<tr>
+				<td id="cell31"></td>
+				<td id="cell32"></td>
+				<td id="cell33"></td>
+			</tr>
+		</table>
+	</body>
+</html>
