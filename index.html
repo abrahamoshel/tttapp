@@ -52,11 +52,13 @@
 							
 							cell.html("<p>V</p>").addClass('human');
 							//switch to X's turn
+							win()
 							turn = 1;
 						}else{
 							
 							cell.html("<p class='button'>D</p>").addClass('computer');
 							// swith to O's turn
+							win()
 							turn = 0;
 						}
 					}
@@ -144,19 +146,19 @@
 		<h1>Tic Tac Toe</h1>
 		<table>
 			<tr>
-				<td id="cell11" onmouseup="win()"></td>
-				<td id="cell12" onmouseup="win()"></td>
-				<td id="cell13" onmouseup="win()"></td>
+				<td id="cell11"></td>
+				<td id="cell12"></td>
+				<td id="cell13"></td>
 			</tr>			    
 			<tr>			    
-				<td id="cell21" onmouseup="win()"></td>
-				<td id="cell22" onmouseup="win()"></td>
-				<td id="cell23" onmouseup="win()"></td>
+				<td id="cell21"></td>
+				<td id="cell22"></td>
+				<td id="cell23"></td>
 			</tr>			    
 			<tr>			   
-				<td id="cell31" onmouseup="win()"></td>
-				<td id="cell32" onmouseup="win()"></td>
-				<td id="cell33" onmouseup="win()"></td>
+				<td id="cell31"></td>
+				<td id="cell32"></td>
+				<td id="cell33"></td>
 			</tr>
 		</table>
 	</body>
