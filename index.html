@@ -7,8 +7,29 @@
 		
 		
 		<script type="text/javascript">
+			
+			
+			
+			function win(){
+					var win1 = $("td[id^='cell1']").text();
+					var win2 = $("td[id^='cell2']").text();
+					var win3 = $("td[id^='cell3']").text();
+					var win4 = $("td[id$='3']").text();
+					var win5 = $("td[id$='2']").text();
+					var win6 = $("td[id$='1']").text();
+
+					
+					if(win1 == "DDD"){
+						alert("Computer Wins");
+					}else if(win1 == "VVV"){
+						alert("Human Wins")
+					}else{
+						
+					}
+				}
 			// wait for document to load
 			$(document).ready(function(){
+			
 				var wins=new Array();
 					wins[1]=[0,11,12,13];
 					wins[2]=[0,21,22,23];
@@ -17,33 +38,37 @@
 					wins[5]=[0,12,22,32];
 					wins[6]=[0,13,23,33];
 					wins[7]=[0,11,22,33];
-					wins[8]=[0,13,22,31];
-			
+					wins[8]=[0,13,22,31];  	
+				
 				// making 0 be the first move
 				var turn = 0;
 				// .one make it so you can't toggle the 0's and X's back and forth
 				$("td[id*='cell']").one("click",
+										
 					function(){
 						var cell = $(this);
 						// check to see who's turn it is and toggling between X's and O's
 						if(turn==0){
 							
-							cell.html("D");
+							cell.html("<p>V</p>").addClass('human');
 							//switch to X's turn
 							turn = 1;
 						}else{
 							
-							cell.html("V");
+							cell.html("<p class='button'>D</p>").addClass('computer');
 							// swith to O's turn
 							turn = 0;
 						}
 					}
+					
 				)
 				// make table cells non-selectable unless you really try to
 				$("table, tr, td").selectable({ disabled: true });
 				
+				
+				
 			});
-		
+								
 		</script>
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
 		<style type="text/css">
@@ -77,7 +102,7 @@
 			}
 			h1{
 				margin: 15px 0px;
-				font: 16px/18px Futura;
+				font: 16px/22px Futura;
 				color: #0c5f85;
 			}
 			body{
@@ -87,7 +112,20 @@
 				margin: auto;
 				font-family: EfonRegular;
 				font-size: 80px;
-				color: #0c5f85;
+				color: #09232F;
+				text-shadow: 1px 1px 3px #4190AF;
+			}
+			.button{
+				-moz-border-radius: 5px;  
+     			-webkit-border-radius: 5px;  
+			   	border-radius: 5px;  
+			    border: 1px solid #368DBE;  
+			    border-top: 1px solid #c3d6df
+			    background: #014464;  
+			    background: -moz-linear-gradient(top, #0D658E, #0C577A 50%, #014D71 51%, #003E5C);  
+			    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0E658E), color-stop(.5, #0C577A), color-stop(.5, #014D71), to(#003E5C));
+			    display: inline;
+				padding: 30px;
 			}
 			/*td:nth-of-type(even):before{
 		    	content: 'Ø';
@@ -106,19 +144,19 @@
 		<h1>Tic Tac Toe</h1>
 		<table>
 			<tr>
-				<td id="cell11"></td>
-				<td id="cell12"></td>
-				<td id="cell13"></td>
-			</tr>
-			<tr>
-				<td id="cell21"></td>
-				<td id="cell22"></td>
-				<td id="cell23"></td>
-			</tr>
-			<tr>
-				<td id="cell31"></td>
-				<td id="cell32"></td>
-				<td id="cell33"></td>
+				<td id="cell11" onmouseup="win()"></td>
+				<td id="cell12" onmouseup="win()"></td>
+				<td id="cell13" onmouseup="win()"></td>
+			</tr>			    
+			<tr>			    
+				<td id="cell21" onmouseup="win()"></td>
+				<td id="cell22" onmouseup="win()"></td>
+				<td id="cell23" onmouseup="win()"></td>
+			</tr>			    
+			<tr>			   
+				<td id="cell31" onmouseup="win()"></td>
+				<td id="cell32" onmouseup="win()"></td>
+				<td id="cell33" onmouseup="win()"></td>
 			</tr>
 		</table>
 	</body>
