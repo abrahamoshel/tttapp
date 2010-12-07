@@ -9,7 +9,11 @@ $(document).ready(function(){
 		if($("#cell11").hasClass("unplayed")){
 			$("#cell11").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');
 			
+		}else if($("td[id^='cell1'].computer").length == 2 & $("#cell12").hasClass("unplayed")){
+			$("#cell12").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');	
 			
+			
+		
 		// check to see if in Column 2 there is 2 human moves and need to be blocked
 		}else if($("td[id$='2'].human").length == 2 & $("#cell32").hasClass("unplayed")){
 			$("#cell32").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');
@@ -64,6 +68,10 @@ $(document).ready(function(){
 			
 		}else if($("#cell12").hasClass("unplayed")){
 			$("#cell12").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');
+			
+			
+		}else if($("#cell23").hasClass("unplayed")){
+			$("#cell23").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');
 			
 			
 		}
