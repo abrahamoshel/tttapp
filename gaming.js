@@ -8,7 +8,8 @@ $(document).ready(function(){
 		//Computer always moves first and always moves to the top left tile
 		if($("#cell11").hasClass("unplayed")){
 			$("#cell11").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');
-			
+		
+		// Computer take winning move if it has the oppurtunity
 		}else if($("td[id^='cell1'].computer").length == 2 & $("#cell12").hasClass("unplayed")){
 			$("#cell12").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');	
 			
@@ -44,6 +45,10 @@ $(document).ready(function(){
 		// check to see if in Row 3 there is 2 human moves and need to be blocked	
 		}else if($("td[id^='cell3'].human").length == 2 & $("#cell31").hasClass("unplayed")){
 			$("#cell31").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');
+			
+			
+		}else if($("td[id^='cell3'].human").length == 2 & $("#cell32").hasClass("unplayed")){
+			$("#cell32").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');
 			
 			
 		}else if($("td[id^='cell3'].human").length == 2 & $("#cell33").hasClass("unplayed")){
