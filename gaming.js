@@ -81,7 +81,7 @@ $(document).ready(function(){
 			
 		}
 		else{
-			$("#cell32").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');
+			$("td[id*='cell'].unplayed").html("<p class='button'>D</p>").removeClass("unplayed").addClass('computer');
 			
 		}
 		
@@ -159,8 +159,10 @@ $(document).ready(function(){
 			$.unbind("click")
 			$.unbind("mouseover")
 			$.unbind("mouseout");
+		}else if ($("td[id*='cell'].unplayed").length == 0){
+			alert("draw");
 		}else{
-			
+		
 		}
 	}
 });
