@@ -6,140 +6,14 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js" type="text/javascript">	</script>
 		
 		
-		<script type="text/javascript">
-			
-			
-			
-			function win(){
-					var win1 = $("td[id^='cell1']").text();
-					var win2 = $("td[id^='cell2']").text();
-					var win3 = $("td[id^='cell3']").text();
-					var win4 = $("td[id$='3']").text();
-					var win5 = $("td[id$='2']").text();
-					var win6 = $("td[id$='1']").text();
-
-					
-					if(win1 == "DDD"){
-						alert("Computer Wins");
-					}else if(win1 == "VVV"){
-						alert("Human Wins")
-					}else{
-						
-					}
-				}
-			// wait for document to load
-			$(document).ready(function(){
-			
-				var wins=new Array();
-					wins[1]=[0,11,12,13];
-					wins[2]=[0,21,22,23];
-					wins[3]=[0,31,32,33];
-					wins[4]=[0,11,21,31];
-					wins[5]=[0,12,22,32];
-					wins[6]=[0,13,23,33];
-					wins[7]=[0,11,22,33];
-					wins[8]=[0,13,22,31];  	
-				
-				// making 0 be the first move
-				var turn = 0;
-				// .one make it so you can't toggle the 0's and X's back and forth
-				$("td[id*='cell']").one("click",
-										
-					function(){
-						var cell = $(this);
-						// check to see who's turn it is and toggling between X's and O's
-						if(turn==0){
-							
-							cell.html("<p>V</p>").addClass('human');
-							//switch to X's turn
-							win()
-							turn = 1;
-						}else{
-							
-							cell.html("<p class='button'>D</p>").addClass('computer');
-							// swith to O's turn
-							win()
-							turn = 0;
-						}
-					}
-					
-				)
-				// make table cells non-selectable unless you really try to
-				$("table, tr, td").selectable({ disabled: true });
-				
-				
-				
-			});
-								
-		</script>
+		<!-- Grabbing the CSS Reset from Yahoo's YUI -->
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
-		<style type="text/css">
-			@font-face {  
-		        font-family: 'EfonRegular';  
-		        src: url('font/EFON-webfont.eot');  
-		        src: local('EfonRegular'), url('font/EFON-webfont.woff') format('woff'), url('WC_Sold_Out_E_Bta.otf') format('truetype'), url('font/EFON-webfont.svg#webfont') format('svg');  
-		        font-weight: normal;  
-		        font-style: normal;  
-		    }
-					
-			/* style all cells */
-			td[id*="cell"]{
-				width: 150px; 
-				height: 150px; 
-				border: 1px solid #CCC;
-			}
-			td#cell11, td#cell21, td#cell31{
-				border-left: none;
-			}
-			/* style the top cells to have no top border */
-			td[id*="cell1"]{
-				border-top: none;
-			}
-			/* style the bottom cells to have no bottom border */
-			td[id*="cell3"]{
-				border-bottom: none;
-			}
-			td#cell13, td#cell23, td#cell33{
-				border-right: none;
-			}
-			h1{
-				margin: 15px 0px;
-				font: 16px/22px Futura;
-				color: #0c5f85;
-			}
-			body{
-				text-align: center;
-			}
-			table{
-				margin: auto;
-				font-family: EfonRegular;
-				font-size: 80px;
-				color: #09232F;
-				text-shadow: 1px 1px 3px #4190AF;
-			}
-			.button{
-				-moz-border-radius: 5px;  
-     			-webkit-border-radius: 5px;  
-			   	border-radius: 5px;  
-			    border: 1px solid #368DBE;  
-			    border-top: 1px solid #c3d6df
-			    background: #014464;  
-			    background: -moz-linear-gradient(top, #0D658E, #0C577A 50%, #014D71 51%, #003E5C);  
-			    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0E658E), color-stop(.5, #0C577A), color-stop(.5, #014D71), to(#003E5C));
-			    display: inline;
-				padding: 30px;
-			}
-			/*td:nth-of-type(even):before{
-		    	content: 'Ø';
-		    }
-		    td:nth-of-type(odd):before{
-		    	content: 'X';
-		    }*/
-		    table{
-		    	text-align: center;
-		    }
 		
-		</style>
+		<!-- My own scripts and stylesheets -->
+		<script src="gaming.js" type="text/javascript">	</script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+				
+		
 	</head>
 	<body>
 	
