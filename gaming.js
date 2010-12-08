@@ -147,20 +147,52 @@ $(document).ready(function(){
 
 		//checking to see if the content of each matching td makes a win a win
 		if(win1 == "DDD" || win2 == "DDD" || win3 == "DDD" || win4 == "DDD" || win5 == "DDD" || win6 == "DDD" || win7 == "DDD" || win8 == "DDD"){
-			alert("Computer Wins");
-			// IF there is a win than the game play stops and you can't click on another tile
-			$.unbind("click")
-			$.unbind("mouseover")
-			$.unbind("mouseout");
+			$( "#alert" ).dialog({
+	            title: 'Computer Wins, your labor is futile	',
+	            resizable: false,
+	            width: 400,
+	            modal: true,
+	            buttons: {
+	                "Play Again": function() {
+	                    $( this ).dialog(location.reload());
+	                },
+	                "I'm done": function() {
+	                    $( this ).dialog( "close" );
+	                }
+	            }
+	        });
 			
 		}else if(win1 == "VVV" || win2 == "VVV" || win3 == "VVV" || win4 == "VVV" || win5 == "VVV" || win6 == "VVV" || win7 == "VVV" || win8 == "VVV"){
-			alert("Human Wins")
-			// IF there is a win than the game play stops and you can't click on another tile
-			$.unbind("click")
-			$.unbind("mouseover")
-			$.unbind("mouseout");
+			$( "#alert" ).dialog({
+	            title: 'Human Wins, thats not suppose to happen',
+	            resizable: false,
+	            width: 400,
+	            modal: true,
+	            buttons: {
+	                "Play Again": function() {
+	                    $( this ).dialog(location.reload());
+	                },
+	                "I'm done": function() {
+	                    $( this ).dialog( "close" );
+	                }
+	            }
+	        });
 		}else if ($("td[id*='cell'].unplayed").length == 0){
-			alert("draw");
+			$( "#alert" ).dialog({
+	            title: 'Draw, no one wins',
+	            resizable: false,
+	            width: 400,
+	            modal: true,
+	            buttons: {
+	                "Play Again": function() {
+	                    $( this ).dialog(location.reload());
+	                },
+	                "I'm done": function() {
+	                    $( this ).dialog( "close" );
+	                }
+	            }
+	        });
+			
 		}else{
 		
 		}
