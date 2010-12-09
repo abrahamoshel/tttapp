@@ -175,6 +175,14 @@ function computersTurn() {
 		
 	}else if($("td[id^='cell3'].human").length == 2 & $("#cell33").hasClass("unplayed")){
 		$("#cell33").computerPlay();
+	
+	// CHECK TO SEE IF THERE IS 2 HUMAN MOVES ON THE DIAGONAL THAT NEEDS TO BLOCK
+	}else if($("#cell31").hasClass("human") & $("#cell22").hasClass("human") & $("#cell13").hasClass("unplayed")){
+		$("#cell13").computerPlay();
+	
+	}else if($("#cell13").hasClass("human") & $("#cell22").hasClass("human") & $("#cell31").hasClass("unplayed")){
+		$("#cell31").computerPlay();
+		
 		
 	// OTHER DEFAULT MOVES IF NO BLOCKING MOVE OR WINNING MOVE	
 	}else if($("#cell11").hasClass("unplayed")){
