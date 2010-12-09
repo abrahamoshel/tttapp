@@ -1,5 +1,5 @@
 // wait for document to load
-$().ready(function(){
+$(document).ready(function(){
 	$("td[id*='cell']").addClass("unplayed");
 	
 	

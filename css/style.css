@@ -1,7 +1,7 @@
 @font-face {  
     font-family: 'EfonRegular';  
-    src: url('font/EFON-webfont.eot');  
-    src: local('../EfonRegular'), url('font/EFON-webfont.woff') format('woff'), url('../WC_Sold_Out_E_Bta.otf') format('truetype'), url('font/EFON-webfont.svg#webfont') format('svg');  
+    src: url('../font/EFON-webfont.eot');  
+    src: local('../EfonRegular'), url('../font/EFON-webfont.woff') format('woff'), url('../WC_Sold_Out_E_Bta.otf') format('truetype'), url('font/EFON-webfont.svg#webfont') format('svg');  
     font-weight: normal;  
     font-style: normal;  
 }
