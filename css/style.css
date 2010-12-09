@@ -44,9 +44,13 @@ table{
 	text-shadow: 1px 1px 3px #4190AF;
 }
 .button{
-	-moz-border-radius: 5px;  
-	-webkit-border-radius: 5px;  
-   	border-radius: 5px;  
+	border-radius: 40px;
+	-moz-border-radius: 40px;  
+	-webkit-border-radius: 40px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-bottom-right-radius: 0px;  
+	-webkit-border-top-left-radius: 0px;
     border: 1px solid #368DBE;  
     border-top: 1px solid #c3d6df
     background: #014464;  
