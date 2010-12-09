@@ -66,16 +66,4 @@ Board.prototype.diagonalWinner = function(player) {
   if (counter == 3) {
     return true;
   }
-
-  cells2 = [13, 22, 31];
-  
-  for (diag in cells2) {
-    if(this.grid[diag.toString()] == player) {
-      counter++;
-    }
-  }
-
-  if (counter == 3) {
-    return true;
-  }
 }
