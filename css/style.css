@@ -5,6 +5,11 @@
     font-weight: normal;  
     font-style: normal;  
 }
+body{
+	font: 14px/22px Futura;
+	color: #0c5f85;
+	text-align: center;
+}
 		
 /* style all cells */
 td[id*="cell"]{
@@ -31,9 +36,6 @@ h1{
 	font: 16px/22px Futura;
 	color: #0c5f85;
 }
-body{
-	text-align: center;
-}
 table{
 	margin: auto;
 	font-family: EfonRegular;
@@ -53,12 +55,6 @@ table{
     display: inline;
 	padding: 30px;
 }
-/*td:nth-of-type(even):before{
-	content: 'ø';
-}
-td:nth-of-type(odd):before{
-	content: 'X';
-}*/
 table{
 	text-align: center;
 }
@@ -73,4 +69,7 @@ a.button{
 	margin: 25px auto 0px;
 	padding: 10px;
 	width: 200px;
+}
+p{
+	margin-bottom: 10px;
 }
